@@ -1,0 +1,64 @@
+object DataModule2: TDataModule2
+  OldCreateOrder = False
+  Height = 377
+  Width = 525
+  object ADOCPHack: TADOConnection
+    ConnectionString = 
+      'Provider=SQLOLEDB.1;Password=CounterPoint8;Persist Security Info' +
+      '=True;User ID=sa;Initial Catalog=CPHackathon;Use Procedure for P' +
+      'repare=1;Auto Translate=True;Packet Size=4096;Workstation ID=WIN' +
+      '-AR185371;Use Encryption for Data=False;Tag with column collatio' +
+      'n when possible=False'
+    Provider = 'SQLOLEDB.1'
+    Left = 416
+    Top = 144
+  end
+  object ADOCPQuery: TADOQuery
+    Connection = ADOCPHack
+    Parameters = <>
+    Left = 312
+    Top = 144
+  end
+  object ADODmartHack: TADOConnection
+    Connected = True
+    ConnectionString = 
+      'Provider=SQLOLEDB.1;Password=CounterPoint8;Persist Security Info' +
+      '=True;User ID=sa;Initial Catalog=DmartHackathon'
+    Provider = 'SQLOLEDB.1'
+    Left = 416
+    Top = 232
+  end
+  object ADODmartQuery: TADOQuery
+    Connection = ADODmartHack
+    Parameters = <>
+    Left = 336
+    Top = 232
+  end
+  object ADODataLakeHack: TADOConnection
+    Connected = True
+    ConnectionString = 
+      'Provider=SQLOLEDB;Password=CounterPoint8;Persist Security Info=T' +
+      'rue;User ID=sa;Initial Catalog=HackathornDataLake'
+    Provider = 'SQLOLEDB.1'
+    Left = 408
+    Top = 304
+  end
+  object ADODataLakeInsertQuery: TADOQuery
+    Connection = ADODataLakeHack
+    Parameters = <>
+    Left = 280
+    Top = 304
+  end
+  object ADOCPUpdateQuery: TADOQuery
+    Connection = ADOCPHack
+    Parameters = <>
+    Left = 192
+    Top = 152
+  end
+  object ADODmartUpdateQuery: TADOQuery
+    Connection = ADODmartHack
+    Parameters = <>
+    Left = 232
+    Top = 232
+  end
+end

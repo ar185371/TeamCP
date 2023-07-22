@@ -1,0 +1,31 @@
+object DataModule2: TDataModule2
+  OldCreateOrder = False
+  OnCreate = DataModuleSetup
+  Height = 377
+  Width = 525
+  object ADOCPQuery: TADOQuery
+    Parameters = <>
+    Left = 312
+    Top = 144
+  end
+  object ADODmartQuery: TADOQuery
+    Parameters = <>
+    Left = 336
+    Top = 232
+  end
+  object ADODataLakeInsertQuery: TADOQuery
+    Parameters = <>
+    Left = 280
+    Top = 304
+  end
+  object ADOCPUpdateQuery: TADOQuery
+    Parameters = <>
+    Left = 192
+    Top = 152
+  end
+  object ADODmartUpdateQuery: TADOQuery
+    Parameters = <>
+    Left = 232
+    Top = 232
+  end
+end

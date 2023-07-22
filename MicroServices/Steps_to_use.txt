@@ -1,0 +1,22 @@
+Step 1 : Open the ProductSuggestionAPP.sln file in VS2022 
+
+Setp 2 : Please update the Database connection detalis in appsettings.json 
+
+Step 3 : Goto the Tools --> Nuget Package Manager Console --> Package Manager Console then execute below commands
+
+         i) Add-Migration InitialCreate 
+        ii) Update-Database
+Note : Once you have executed the above commands then in your local database HackathornDataLake will be created by EF Core.
+ 
+Step4 : If you want to run UI and MicroServices both at the same time , then please update the below setting in your visual studio 
+
+	i) Right click on solution 
+	ii) Then tap on Properties 
+	iii) Select the Multiple startup projects radio button 
+	iv) Now update the Action as start for both projects
+
+Setp 5 : Open the below path in file explorer
+
+	..\source\repos\MicroServices\ProductSuggestionAPP.UI\ClientApp
+
+Then we have to open CMD from this location , and run the npm install to get the required packages for reactjs.

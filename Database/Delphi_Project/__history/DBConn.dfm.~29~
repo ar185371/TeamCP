@@ -1,0 +1,80 @@
+object DataModule2: TDataModule2
+  OldCreateOrder = False
+  Height = 377
+  Width = 525
+  object ADOCPHack: TADOConnection
+    ConnectionString = 
+      'Provider=SQLOLEDB.1;Password=CounterPoint8;Persist Security Info' +
+      '=True;User ID=sa;Initial Catalog=CPHackathon;Use Procedure for P' +
+      'repare=1;Auto Translate=True;Packet Size=4096;Workstation ID=WIN' +
+      '-AR185371;Use Encryption for Data=False;Tag with column collatio' +
+      'n when possible=False'
+    Provider = 'SQLOLEDB.1'
+    Left = 176
+    Top = 104
+  end
+  object tblConn1: TADOTable
+    Connection = ADOCPHack
+    Left = 248
+    Top = 104
+  end
+  object dscConn1: TDataSource
+    DataSet = tblConn1
+    Left = 304
+    Top = 112
+  end
+  object ADOCPQuery: TADOQuery
+    Connection = ADOCPHack
+    Parameters = <>
+    Left = 104
+    Top = 104
+  end
+  object ADODmartHack: TADOConnection
+    Connected = True
+    ConnectionString = 
+      'Provider=SQLOLEDB.1;Password=CounterPoint8;Persist Security Info' +
+      '=True;User ID=sa;Initial Catalog=DmartHackathon'
+    Provider = 'SQLOLEDB.1'
+    Left = 184
+    Top = 160
+  end
+  object ADODmartQuery: TADOQuery
+    Connection = ADODmartHack
+    Parameters = <>
+    Left = 112
+    Top = 160
+  end
+  object ADODataLakeHack: TADOConnection
+    Connected = True
+    ConnectionString = 
+      'Provider=SQLOLEDB;Password=CounterPoint8;Persist Security Info=T' +
+      'rue;User ID=sa;Initial Catalog=HackathornDataLake'
+    Provider = 'SQLOLEDB'
+    Left = 424
+    Top = 296
+  end
+  object ADODataLakeQuery: TADOQuery
+    Connection = ADODataLakeHack
+    Parameters = <>
+    Left = 344
+    Top = 304
+  end
+  object ADODataLakeInsertQuery: TADOQuery
+    Connection = ADODataLakeHack
+    Parameters = <>
+    Left = 240
+    Top = 304
+  end
+  object ADOCPUpdateQuery: TADOQuery
+    Connection = ADOCPHack
+    Parameters = <>
+    Left = 40
+    Top = 112
+  end
+  object ADODmartUpdateQuery: TADOQuery
+    Connection = ADODmartHack
+    Parameters = <>
+    Left = 32
+    Top = 168
+  end
+end

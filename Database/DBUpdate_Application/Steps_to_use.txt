@@ -1,0 +1,9 @@
+Step 1 : Run 'DB_Script.sql' into SSMS.
+This must create 3 new database (CPHackathon, DmartHackathon and HackathornDataLake)
+Then create Table in all the 3 dataabse and load some sample data under CPHackathon and DmartHackathon database.
+For demo purpose we will manually insert data but in real world it is expected to get data from POS/Ecommerce
+
+Step 2 : Run DataLoadintoDataLake.exe to load data into DataLake (HackathornDataLake database)
+This Application is created in Delphi
+Prerequisite is we must keep 'DataLoadintoDataLake.exe' and 'ConnectingString.ini' in same folder.
+On douple click on the exe it will open a new screen and that screen has button. On click of that button application will search that if there are any SALES data available in CPHackathon/DmartHackathon database that is not present in HackathornDataLake it will copy.
